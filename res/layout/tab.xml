@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbarStyle="insideOverlay" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <SlidingDrawer
+                android:id="@+id/slidingDrawer1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:content="@+id/content"
+                android:handle="@+id/handle"
+                android:importantForAccessibility="auto"
+                android:overScrollMode="always"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/handle"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:fitsSystemWindows="false"
+                    android:overScrollMode="always"
+                    android:scaleType="fitXY"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:src="@drawable/slide"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="fill"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="안녕!" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="히힛" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </SlidingDrawer>
+        </LinearLayout>
+    </LinearLayout>
+
+</TabHost>
